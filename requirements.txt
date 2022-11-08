@@ -4,7 +4,15 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-asgiref==3.2.10           # via django
-django==3.1.2             # via -r requirements.in
+asgiref==3.5.2            # via django
+dj-database-url==1.0.0    # via django-heroku
+django==3.2.16            # via -r requirements.in, dj-database-url, django-heroku
+django_heroku==0.3.1      # via -r requirements.in
+gunicorn==20.0.4          # via -r requirements.in
+psycopg2==2.9.5           # via django-heroku
 pytz==2022.6              # via django
 sqlparse==0.4.3           # via django
+whitenoise==6.2.0         # via django-heroku
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
